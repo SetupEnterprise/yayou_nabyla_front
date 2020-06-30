@@ -5,7 +5,11 @@ class Banniere extends Component {
     render() {
         return (
             <div className="border banniere-size">
-                <h1>Banniere ici</h1>
+                <span className="font-banniere">
+                    Yayou Nabyla <br/>
+                    <span className="font-banniere-small">Automobile</span>
+                </span>
+                <img src="images/banniere.png" className="img-fluid" alt="Baninere"/>
             </div>
         );
     }

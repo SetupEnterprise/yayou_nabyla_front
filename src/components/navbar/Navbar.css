@@ -9,7 +9,10 @@
     text-decoration: none;
 }
 .link-style:active {
-    color: chocolate;
+    color: #e7cc57;
+}
+.link-style:hover {
+    color: #e7cc57;
 }
 .navbar-style{
     display: inline;

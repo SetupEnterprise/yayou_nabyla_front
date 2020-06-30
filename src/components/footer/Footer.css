@@ -1,3 +1,20 @@
 .footer-size{
     height: 150px;
 }
+.banniere-footer{
+    position: absolute;
+}
+.bg-footer{
+    background-color: #e7cc57;
+}
+.img-footer{
+    height: 120px;
+    width: 120px;
+}
+.btn-couleur{
+    background-color: #e7cc57;
+    font-weight: bold;
+}
+@media only screen and (max-width: 1200px) {
+    
+}

@@ -11,8 +11,8 @@ class Layout extends Component {
     render() {
         return (
             <Router>
-                <Navbar/>
                 <Banniere/>
+                <Navbar/>
                 <div className="row mt-3">
                     <div className="col-md-2 ml-5">
                         <Sidebar/>

@@ -5,8 +5,8 @@ class Navbar extends Component {
     render() {
         return (
             <>
-                <div className="border">
-                    <img src="images/logo.jpeg" className="image-logo"/>
+                <div className="border sticky-top">
+                    <img src="images/yayounabyla.png" className="image-logo"/>
                     <ul className="nav justify-content-end mr-5">
                         <li className="nav-item">
                             <a className="nav-link  link-style active" href="#">HOME</a>

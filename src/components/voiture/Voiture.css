@@ -1,2 +1,10 @@
 .img-voiture-style {
 }
+.couleur-text{
+    color: #e7cc57;
+    font-size: 20px;
+}
+
+.bg-couleur{
+    background-color: #e7cc57;
+}
