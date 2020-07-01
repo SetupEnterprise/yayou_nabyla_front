@@ -6,7 +6,7 @@ class Dashboard extends Component {
     render() {
         return (
             <>
-                <div className="col-sm-9">
+                <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12">
                     <div className="card">
                         <div className="card-header text-style">
                             Voiture sur le marché

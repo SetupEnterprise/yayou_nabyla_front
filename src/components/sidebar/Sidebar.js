@@ -11,7 +11,7 @@ class Sidebar extends Component {
                     <p className="text-center text-style card-text">Modèles</p>
                     <p className="text-center text-style card-text">Couleurs</p>
                     <p className="text-center text-style card-text">Année</p>
-                    <img src="images/img_sidebar.png" className="img-fluid" height="200" alt="Image"/>
+                    <img src="images/img_sidebar.png" className="img-fluid image-sidebar" alt="Image"/>
             </div>
         );
     }

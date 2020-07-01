@@ -5,7 +5,7 @@ class Footer extends Component {
     render() {
         return (
             <>
-                <div className="border footer-size">
+                <div className="footer-size">
                     <div className="banniere-footer">
                         <h5 className="ml-2">Laissez-nous un message</h5>
                         <form className="ml-2">
@@ -18,7 +18,7 @@ class Footer extends Component {
                             <button type="submit" class="btn btn-block btn-couleur">Envoyer</button>
                         </form>
                     </div>
-                    <img src="images/bannierefooter.png" className="img-fluid" alt="Image footer" />
+                    <img src="images/bannierefooter.png" className="img-fluid img-banniere-footer" alt="Image footer" />
                     <div className="bg-footer clearfix">
                         <div className="clearfix">
                             <img src="images/yayounabyla.png" className="img-fluid float-right img-footer" />
