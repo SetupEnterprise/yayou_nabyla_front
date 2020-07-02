@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
+
+    constructor() {
+        super();
+    }
+    
+
+    getUrlName = (e) => {
+        const {path} = window.location.pathname;
+        console.log('path', path);
+    }
+
     render() {
+        const { path } = this.state;
+
         return (
             <>
+            {path}
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <a className="navbar-brand" href="#">
                         <img src="images/yayounabyla.png" width="30" height="30" className="img-fluid" alt=""/>
@@ -13,13 +28,17 @@ class Navbar extends Component {
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">                        
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                                <a className="nav-link text-uppercase font-weight-bold" href="#">Accueil </a>
+                                <Link to="/accueil" onClick={this.getUrlName}>
+                                    <a className="nav-link text-uppercase font-weight-bold" href="#" >Accueil </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-uppercase font-weight-bold" href="#">Achat</a>
+                                <Link to="/achat" onClick={this.getUrlName}>
+                                    <a className="nav-link text-uppercase font-weight-bold" href="#" >Achat</a>
+                                </Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-uppercase font-weight-bold" href="#">Location</a>

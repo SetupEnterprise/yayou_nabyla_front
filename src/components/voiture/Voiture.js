@@ -3,6 +3,8 @@ import './Voiture.css';
 
 class Voiture extends Component {
     render() {
+        const { path } = this.props;
+
         return (
             <>
                 <div className="col-md-4">
