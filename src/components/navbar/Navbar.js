@@ -7,19 +7,11 @@ class Navbar extends Component {
     constructor() {
         super();
     }
-    
-
-    getUrlName = (e) => {
-        const {path} = window.location.pathname;
-        console.log('path', path);
-    }
 
     render() {
-        const { path } = this.state;
 
         return (
             <>
-            {path}
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <a className="navbar-brand" href="#">
                         <img src="images/yayounabyla.png" width="30" height="30" className="img-fluid" alt=""/>
@@ -30,13 +22,13 @@ class Navbar extends Component {
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">                        
                         <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
-                                <Link to="/accueil" onClick={this.getUrlName}>
+                            <li className='nav-item active'>
+                                <Link to="/accueil" >
                                     <a className="nav-link text-uppercase font-weight-bold" href="#" >Accueil </a>
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/achat" onClick={this.getUrlName}>
+                                <Link to="/achat">
                                     <a className="nav-link text-uppercase font-weight-bold" href="#" >Achat</a>
                                 </Link>
                             </li>

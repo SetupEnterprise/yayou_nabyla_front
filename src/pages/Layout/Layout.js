@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from '../../components/navbar/Navbar';
 import Banniere from '../../components/banniere/Banniere';
 import Sidebar from '../../components/sidebar/Sidebar';
-import Voiture from '../../components/voiture/Voiture';
 import Footer from '../../components/footer/Footer';
 import './Layout.css';
 

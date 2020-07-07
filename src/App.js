@@ -13,9 +13,7 @@ class App extends Component {
   /* On définit ici l'ensembles des chemins (Route) */
   renderRoutes = () => (
     <>
-      <Route path='/' component={ Dashboard }/>
-      <Route path='/accueil' component={ Dashboard }/>
-      <Route path='/achat' component={ Dashboard }/>
+        <Route path="/" component={ Dashboard }/>
     </>
   )
   render() {

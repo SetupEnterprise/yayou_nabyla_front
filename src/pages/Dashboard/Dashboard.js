@@ -1,45 +1,45 @@
 import React, { Component } from 'react';
 import './Dashboard.css';
 import Voiture from '../../components/voiture/Voiture';
+import Header from '../../components/header/Header';
 
 class Dashboard extends Component {
 
     constructor() {
         super();
         this.state = {
+            url: ''
         }
     }
 
-    /* componentDidMount(){
-        let { path } = window.location.pathname;
-        this.setState({ path });
-        console.log('path', path);
-    } */
+    componentDidMount(){
+        this.gerUrl();
+    }
+
+    gerUrl = () =>{
+        this.setState({ url: window.location.pathname })
+    }
 
     render() {
-        let { path } = this.props;
+        const { url } = this.state;
+        console.log('url', url);
+        
 
         return (
             <>
                 <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12">
                     <div className="card">
-                        {
-                            path === '/accueil' || path === '/' ?
-                            <div className="card-header text-style">
-                                Nouvelle arrivage
-                            </div> :
-                            <div className="card-header text-style">
-                                Voiture en vente
-                            </div>
-                        }
+                       <Header path={ url }/>
                         <div className="card-body">
                             <div className="row mt-2">
-                                <Voiture/>
-                                <Voiture/>
-                                <Voiture/>
-                                <Voiture/>
-                                <Voiture/>
-                                <Voiture/>
+
+                                <Voiture />
+                                <Voiture />
+                                <Voiture />
+                                <Voiture />
+                                <Voiture />
+                                <Voiture />
+
                             </div>
                         </div>
                         <span className="text-center">
