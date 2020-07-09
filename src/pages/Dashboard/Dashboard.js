@@ -17,7 +17,9 @@ class Dashboard extends Component {
     }
 
     gerUrl = () =>{
-        this.setState({ url: window.location.pathname })
+        //this.setState({ url: window.location.pathname })
+        //this.setState({ url: this.props.location.pathname })
+        this.setState({ url: window.location.href})
     }
 
     render() {
