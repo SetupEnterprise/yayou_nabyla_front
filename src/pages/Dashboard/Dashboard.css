@@ -1,0 +1,10 @@
+.spinner-color{
+    color : #e7cc57;
+}
+
+.page-item-bg :active{
+    background-color: #e7cc57;
+}
+.page-item-bg {
+    color: #e7cc57;
+}
