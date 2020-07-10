@@ -10,16 +10,15 @@ class Dashboard extends Component {
     constructor() {
         super();
         this.state = {
-            url: '',
             automobiles: [],
             loading: false,
             nbre_pages: 0,
-            nbre_auto: 0
+            nbre_auto: 0,
+            url: ''
         }
     }
 
     componentDidMount(){
-        this.gerUrl();
         //Chargement de la page avant arrivee des donnees dans la base
         this.setState({ loading: true });
         //Requete base de données
@@ -43,12 +42,10 @@ class Dashboard extends Component {
         );
     }
 
-    gerUrl = () =>{
-        this.setState({ url: window.location.href})
-    }
-
     render() {
-        const { url, automobiles, loading, nbre_pages, nbre_auto } = this.state;
+        const { automobiles, loading, nbre_pages, nbre_auto } = this.state;
+        const { url } = this.props;
+        
 
         return (
             <>
@@ -60,7 +57,7 @@ class Dashboard extends Component {
 
                                 {
                                     loading ? 
-                                    <div className="d-flex justify-content-center text-center">
+                                    <div className="col-12 text-center">
                                         <div className="spinner-border spinner-color" role="status">
                                             <span className="sr-only">Loading...</span>
                                         </div>

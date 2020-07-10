@@ -8,7 +8,9 @@ import Footer from '../../components/footer/Footer';
 import './Layout.css';
 
 class Layout extends Component {
+    
     render() {
+
         return (
             <Router>
                 <div>

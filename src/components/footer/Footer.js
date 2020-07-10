@@ -9,13 +9,13 @@ class Footer extends Component {
                     <div className="banniere-footer">
                         <h5 className="ml-2">Laissez-nous un message</h5>
                         <form className="ml-2">
-                            <div class="form-group">
+                            <div className="form-group">
                               <input type="email" className="form-control" name="" placeholder="Adresse E-mail" />
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                               <textarea className="form-control" name="" rows="3" placeholder="Votre message ici"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-block btn-couleur">Envoyer</button>
+                            <button type="submit" className="btn btn-block btn-couleur">Envoyer</button>
                         </form>
                     </div>
                     <img src="images/bannierefooter.png" className="img-fluid img-banniere-footer" alt="Image footer" />
