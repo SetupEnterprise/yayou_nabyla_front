@@ -8,6 +8,11 @@ class Navbar extends Component {
         super();
     }
 
+    getUrlName = (e) => {
+        const path = window.location.pathname;
+        console.log('path', path);
+    }
+
     render() {
 
         return (
@@ -23,13 +28,13 @@ class Navbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">                        
                         <ul className="navbar-nav mr-auto">
                             <li className='nav-item active'>
-                                <Link to="/accueil" url="/accueil">
-                                    <a className="nav-link text-uppercase font-weight-bold" href="#" >Accueil </a>
+                                <Link to="/accueil" className= "text-decoration-none" onClick={this.getUrlName}>
+                                    <a className="nav-link text-uppercase font-weight-bold" >Accueil </a>
                                 </Link>
                             </li>
                             <li className="nav-item" >
-                                <Link to="/achat" url="/achat">
-                                    <a className="nav-link text-uppercase font-weight-bold" href="#" >Achat</a>
+                                <Link to="/achat" className="text-decoration-none" onClick={this.getUrlName}>
+                                    <a className="nav-link text-uppercase font-weight-bold" >Achat</a>
                                 </Link>
                             </li>
                             <li className="nav-item">

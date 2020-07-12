@@ -13,14 +13,16 @@ class Dashboard extends Component {
             automobiles: [],
             loading: false,
             nbre_pages: 0,
-            nbre_auto: 0,
-            url: ''
+            nbre_auto: 0
         }
     }
 
     componentDidMount(){
         //Chargement de la page avant arrivee des donnees dans la base
         this.setState({ loading: true });
+        const { url } = this.props.location.pathname;
+        console.log('urls', window.location.pathname);
+        this.setState({ url });
         //Requete base de données
         axios.get(`${BASE_URL}/api/automobiles`)
         .then(
@@ -45,7 +47,6 @@ class Dashboard extends Component {
     render() {
         const { automobiles, loading, nbre_pages, nbre_auto } = this.state;
         const { url } = this.props;
-        
 
         return (
             <>
@@ -54,8 +55,8 @@ class Dashboard extends Component {
                        <Header path={ url }/>
                         <div className="card-body">
                             <div className="row mt-2">
-
                                 {
+                                    automobiles.length > 0 ?
                                     loading ? 
                                     <div className="col-12 text-center">
                                         <div className="spinner-border spinner-color" role="status">
@@ -64,7 +65,8 @@ class Dashboard extends Component {
                                     </div> :
                                     automobiles.map((auto, key) => 
                                         <Voiture value={ auto } />
-                                    )
+                                    ) :
+                                    <h2 className="col-12 text-center">Aucun véhicule n'est encore enregistré</h2>
                                 }
 
                             </div>
