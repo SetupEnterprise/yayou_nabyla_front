@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Dashboard from '../src/pages/Dashboard/Dashboard';
 import Layout from '../src/pages/Layout/Layout';
+import Filtre from './pages/Filtre/Filtre';
 
 class App extends Component {  
 
@@ -14,6 +15,7 @@ class App extends Component {
   renderRoutes = () => (
     <>
         <Route path="/" component={ Dashboard }/>
+        <Route path="/prix" component={ Filtre }/>
     </>
   )
   render() {

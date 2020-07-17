@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './Dashboard.css';
+import './Filtre.css';
 import Voiture from '../../components/voiture/Voiture';
 import Header from '../../components/header/Header';
 import axios from 'axios';
 import { BASE_URL } from '../../../src/Config';
 
-class Dashboard extends Component {
+class Filtre extends Component {
 
     constructor() {
         super();
@@ -20,11 +20,8 @@ class Dashboard extends Component {
     componentDidMount(){
         //Chargement de la page avant arrivee des donnees dans la base
         this.setState({ loading: true });
-        const { url } = this.props.location.pathname;
-        console.log('urls', window.location.pathname);
-        this.setState({ url });
         //Requete base de données
-        axios.get(`${BASE_URL}/api/automobiles`)
+        axios.get(`${BASE_URL}/api/trie_par_prix`)
         .then(
             response => {
                 const { data } = response;
@@ -46,7 +43,7 @@ class Dashboard extends Component {
 
     render() {
         const { automobiles, loading, nbre_pages, nbre_auto } = this.state;
-        const { url } = this.props;
+        const { url } = 'accueil';
 
         return (
             <>
@@ -98,4 +95,4 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+export default Filtre;
