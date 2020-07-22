@@ -3,6 +3,10 @@
     font-weight: bold;
 }
 
+.filtre:hover{
+    color: #e7cc57;
+}
+
 @media only screen and (max-width: 540px) {
     .image-sidebar{
         height: 250px;

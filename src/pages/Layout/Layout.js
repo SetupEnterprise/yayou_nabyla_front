@@ -8,25 +8,41 @@ import Footer from '../../components/footer/Footer';
 import './Layout.css';
 
 class Layout extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+        }
+    }
+    
+
+    getPriorite = (priorite) =>{
+        console.log('priorite', priorite);
+    }
+
+    filterBy = (nom) =>{
+        
+    }
     
     render() {
-
         return (
             <Router>
-                <div>
-                    <Banniere/>
-                </div>
-                <div>
-                    <Navbar/>
-                </div>
-                <div className="row mt-3">
-                    <div className="col-xl-2 col-lg-2 col-md-2 col-sm-2 ml-5 col-8 sidebar-style">
-                        <Sidebar/>
-                    </div>                    
-                    { this.props.children }
-                </div>
-                <div className="mt-5">
-                    <Footer/>
+                <div className="container-fluid">
+                    <div>
+                        <Navbar getPriorite={this.getPriorite}/>
+                    </div>
+                    <div>
+                        <Banniere/>
+                    </div>
+                    <div className="row" >
+                        <div className="col-xl-2 col-lg-2 col-md-2 col-sm-2 ml-5 col-8 sidebar-style">
+                            <Sidebar filterBy={ this.filterBy }/>
+                        </div>                    
+                        { this.props.children }
+                    </div>
+                    <div className="mt-5">
+                        <Footer/>
+                    </div>
                 </div>
             </Router>
         );

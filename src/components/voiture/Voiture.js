@@ -28,7 +28,7 @@ class Voiture extends Component {
                             <div className="modal-header">
                                 <h5 className="modal-title" id="staticBackdropLabel">{value.nom_marque} {value.version}</h5>
                                 <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                    <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div className="modal-body">
@@ -41,13 +41,22 @@ class Voiture extends Component {
                                     </ol>
                                     <div className="carousel-inner">
                                         <div className="carousel-item active">
-                                            <img src="images/voiture_1.jpg" className="d-block w-100" />
+                                            <img 
+                                                src="images/voiture_1.jpg" id="demo" 
+                                                data-zoom-image="images/voiture_1.jpg"
+                                                className="d-block w-100" />
                                         </div>
                                         <div className="carousel-item">
-                                            <img src="images/voiture_1.jpg" className="d-block w-100" />
+                                            <img 
+                                                src="images/voiture_1.jpg" id="demo" 
+                                                data-zoom-image="images/voiture_1.jpg"
+                                                className="d-block w-100" />
                                         </div>
                                         <div className="carousel-item">
-                                            <img src="images/voiture_1.jpg" className="d-block w-100" />
+                                            <img 
+                                                src="images/voiture_1.jpg" id="demo" 
+                                                data-zoom-image="images/voiture_1.jpg"
+                                                className="d-block w-100" />
                                         </div>
                                     </div>
                                     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

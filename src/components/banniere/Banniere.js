@@ -4,7 +4,7 @@ import './Banniere.css';
 class Banniere extends Component {
     render() {
         return (
-            <div className="border banniere-size">
+            <div className="border banniere-size mb-3">
                 <span className="font-banniere">
                     Yayou Nabyla <br/>
                     <span className="font-banniere-small">Automobile</span>

@@ -7,26 +7,22 @@ import {
 } from "react-router-dom";
 import Dashboard from '../src/pages/Dashboard/Dashboard';
 import Layout from '../src/pages/Layout/Layout';
-import Filtre from './pages/Filtre/Filtre';
 
 class App extends Component {  
 
   /* On définit ici l'ensembles des chemins (Route) */
   renderRoutes = () => (
     <>
-        <Route path="/" component={ Dashboard }/>
-        <Route path="/prix" component={ Filtre }/>
+      <Route path="/" component={ Dashboard }/>
     </>
   )
   render() {
     return (
       <Router>
         <Switch>
-          <Layout>
             <Route component={({ match }) =>
               this.renderRoutes()
             }/>
-          </Layout>
         </Switch>
       </Router>
     );

@@ -1,6 +1,11 @@
 .img-voiture-style:hover {
     cursor: pointer;
 }
+
+.img-voiture-style {
+    width: 238px;
+    height : 158px;
+}
 .couleur-text{
     color: #e7cc57;
     font-size: 20px;

@@ -28,14 +28,17 @@ class Navbar extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">                        
                         <ul className="navbar-nav mr-auto">
                             <li className='nav-item active'>
-                                <Link to="/accueil" className= "text-decoration-none" onClick={this.getUrlName}>
-                                    <a className="nav-link text-uppercase font-weight-bold" >Accueil </a>
-                                </Link>
+                                <a 
+                                    className="nav-link text-uppercase font-weight-bold"
+                                    style= {{ cursor: 'pointer' }}
+                                    onClick={() => this.props.getPriorite('accueil')}
+                                >Accueil </a>
                             </li>
                             <li className="nav-item" >
-                                <Link to="/achat" className="text-decoration-none" onClick={this.getUrlName}>
-                                    <a className="nav-link text-uppercase font-weight-bold" >Achat</a>
-                                </Link>
+                                <a 
+                                    className="nav-link text-uppercase font-weight-bold"
+                                    style= {{ cursor: 'pointer' }}
+                                    onClick={() => this.props.getPriorite('achat')} >Achat</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-uppercase font-weight-bold" href="#">Location</a>
