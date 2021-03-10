@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import Dashboard from '../src/pages/Dashboard/Dashboard';
-import Layout from '../src/pages/Layout/Layout';
+/* import Layout from '../src/pages/Layout/Layout'; */
 
 class App extends Component {  
 
